@@ -9,6 +9,8 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/AppTheme">
+        <activity android:name=".introslider.ui.kotlincode.SliderActivity">
+        </activity>
         <activity android:name=".introslider.ui.Splash_screen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>

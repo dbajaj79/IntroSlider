@@ -53,6 +53,8 @@ public class MainScreen extends AppCompatActivity {
         }
     }
 
+
+
     public void skip(View view) {
         launchMain();
     }

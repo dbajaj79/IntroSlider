@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.databinding.DataBindingUtil;
 import com.example.R;
 import com.example.databinding.ActivitySplashScreenBinding;
+import com.example.introslider.ui.kotlincode.SliderActivity;
 
 public class Splash_screen extends AppCompatActivity {
 
@@ -20,7 +21,7 @@ public class Splash_screen extends AppCompatActivity {
             public void run() {
                 try {
                     sleep(1200);
-                    Intent intent = new Intent(getApplicationContext(),MainScreen.class);
+                    Intent intent = new Intent(getApplicationContext(), SliderActivity.class);
                     startActivity(intent);
                     finish();
                 } catch (InterruptedException e) {

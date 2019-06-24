@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools" xmlns:app="http://schemas.android.com/apk/res-auto">
+    <data>
+        <variable name="adapter" type="com.example.introslider.ui.kotlincode.MyPagerAdapter"/>
+        <variable name="onclick" type="com.example.introslider.ui.kotlincode.SliderActivity.MyButtonClick"/>
+    </data>
+<androidx.constraintlayout.widget.ConstraintLayout
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+tools:context=".introslider.ui.kotlincode.SliderActivity">
+    <androidx.viewpager.widget.ViewPager
+            android:id="@+id/view_pager_intro"
+            android:layout_width="0dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:adapter="@{adapter}"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            android:layout_height="0dp"></androidx.viewpager.widget.ViewPager>
+<Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+android:text="Back" android:id="@+id/btn_back"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:onClick="@{(v)->onclick.onClick(v)}"
+        app:layout_constraintBottom_toBottomOf="parent"
+
+/>
+    <Button android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Next" android:id="@+id/btn_next"
+            app:layout_constraintRight_toRightOf="parent"
+            android:onClick="@{(v)->onclick.onClick(v)}"
+            app:layout_constraintBottom_toBottomOf="parent"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
